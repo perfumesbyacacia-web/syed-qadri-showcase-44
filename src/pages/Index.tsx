@@ -157,7 +157,7 @@ const Index = () => {
       "Implemented features to improve focus and efficiency, helping users manage tasks, track time, and organize information in one centralized application",
       "Built modular and maintainable code to allow for easy updates and future expansions"
     ],
-    link: "#",
+    link: "https://github.com/qadrisyedd/essentials..git",
     icon: Code
   }, {
     title: "Cipher Program",
@@ -171,7 +171,7 @@ const Index = () => {
       "Features a menu-driven program flow allowing users to choose between encryption, decryption, or exiting the application",
       "Designed for simplicity and security, helping users manage basic encrypted communications effectively"
     ],
-    link: "#",
+    link: "https://github.com/qadrisyedd/Cipher-Program.git",
     icon: Code
   }];
   return <div className="min-h-screen bg-background">
