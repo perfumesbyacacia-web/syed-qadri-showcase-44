@@ -253,32 +253,7 @@
     --skill-glow: 120 100% 60%;
   }
 
-  .skill-card.skill-expert {
-    border-color: hsl(var(--skill-color) / 0.3);
-  }
-
-  .skill-card.skill-expert:hover {
-    border-color: hsl(var(--skill-color) / 0.6);
-    box-shadow: 0 0 20px hsl(var(--skill-color) / 0.3);
-  }
-
-  .skill-card.skill-intermediate {
-    border-color: hsl(var(--skill-color) / 0.3);
-  }
-
-  .skill-card.skill-intermediate:hover {
-    border-color: hsl(var(--skill-color) / 0.6);
-    box-shadow: 0 0 20px hsl(var(--skill-color) / 0.3);
-  }
-
-  .skill-card.skill-beginner {
-    border-color: hsl(var(--skill-color) / 0.3);
-  }
-
-  .skill-card.skill-beginner:hover {
-    border-color: hsl(var(--skill-color) / 0.6);
-    box-shadow: 0 0 20px hsl(var(--skill-color) / 0.3);
-  }
+  /* Remove custom skill card borders - use standard design system borders */
 
   /* Progress bar styles */
   .progress-bar {

@@ -181,9 +181,42 @@ const Index = () => {
           <h1 className="text-6xl md:text-8xl font-bold rainbow-text mb-8 lg:text-7xl">
             Syed Qadri
           </h1>
-          
+           
           <div className="mt-8 animate-fade-in">
-            <p className="font-bold text-gray-300 text-base">Computer Science Undergraduate | Aspiring Programmer & Data Analyst  </p>
+            <p className="font-bold text-gray-300 text-base mb-8">Computer Science Undergraduate | Aspiring Programmer & Data Analyst  </p>
+            
+            {/* Social Buttons */}
+            <div className="flex justify-center gap-6 mt-8">
+              <Button
+                variant="outline"
+                size="lg"
+                className="hero-social-button"
+                onClick={() => window.open('https://linkedin.com/in/your-profile', '_blank')}
+              >
+                <Linkedin className="w-5 h-5 mr-2" />
+                LinkedIn
+              </Button>
+              
+              <Button
+                variant="outline"
+                size="lg"
+                className="hero-social-button"
+                onClick={() => window.open('https://github.com/qadrisyedd', '_blank')}
+              >
+                <Github className="w-5 h-5 mr-2" />
+                GitHub
+              </Button>
+              
+              <Button
+                variant="outline"
+                size="lg"
+                className="hero-social-button"
+                onClick={() => window.open('#', '_blank')}
+              >
+                <FileText className="w-5 h-5 mr-2" />
+                Resume
+              </Button>
+            </div>
           </div>
         </div>
 
@@ -214,7 +247,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-3 mb-12">
             <Code className="w-8 h-8" style={{ color: 'hsl(var(--section-skills-glow))' }} />
-            <h2 className="text-4xl font-bold" style={{ color: 'hsl(var(--section-skills-glow))' }}>Skills</h2>
+            <h2 className="text-4xl font-bold text-white">Skills</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
