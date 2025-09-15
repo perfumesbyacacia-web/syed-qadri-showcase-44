@@ -227,7 +227,7 @@ const Index = () => {
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-3 mb-12">
             <User className="w-8 h-8" style={{ color: 'hsl(var(--section-about-glow))' }} />
-            <h2 className="text-4xl font-bold" style={{ color: 'hsl(var(--section-about-glow))' }}>About Me</h2>
+            <h2 className="text-4xl font-bold text-white">About Me</h2>
           </div>
           
           <Card className="bg-card/30 backdrop-blur-sm border-border/50">
@@ -260,12 +260,7 @@ const Index = () => {
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
                     <skill.icon 
-                      className="w-6 h-6" 
-                      style={{ 
-                        color: skill.proficiency === 'expert' ? 'hsl(0 100% 50%)' :
-                               skill.proficiency === 'intermediate' ? 'hsl(35 100% 55%)' :
-                               'hsl(120 100% 50%)'
-                      }} 
+                      className="w-6 h-6 text-white" 
                     />
                     <h3 className="text-xl font-semibold">{skill.name}</h3>
                   </div>

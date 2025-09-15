@@ -266,13 +266,13 @@
   }
 
   .progress-intermediate {
-    background: linear-gradient(90deg, hsl(35 100% 55%), hsl(35 100% 65%));
-    width: 75%;
+    background: linear-gradient(90deg, hsl(45 100% 60%), hsl(45 100% 70%));
+    width: 66%;
   }
 
   .progress-beginner {
     background: linear-gradient(90deg, hsl(120 100% 50%), hsl(120 100% 60%));
-    width: 50%;
+    width: 66%;
   }
 
   /* Project cards */
@@ -295,26 +295,97 @@
     left: 100%;
   }
 
-  /* Social buttons in hero */
+  /* Social buttons in hero - Smoother animations like project cards */
   .hero-social-button {
-    @apply relative overflow-hidden rounded-full bg-card/20 backdrop-blur-sm border border-border/30 p-4 transition-all duration-300 hover:scale-110 hover:bg-card/40 hover:border-primary/50;
+    @apply relative overflow-hidden rounded-full bg-card/20 backdrop-blur-sm border border-border/30 p-4 transition-all duration-500 hover:scale-105 hover:bg-card/40 hover:border-primary/50;
   }
 
   .hero-social-button::before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: radial-gradient(circle, hsl(var(--primary) / 0.2), transparent);
-    transition: all 0.3s ease;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.1), transparent);
+    transition: left 0.7s;
   }
 
   .hero-social-button:hover::before {
-    width: 200px;
-    height: 200px;
+    left: 100%;
+  }
+
+  /* Custom Skill Proficiency Styles */
+  .skill-expert {
+    @apply transition-all duration-500 hover:scale-105 hover:border-red-500/50;
+  }
+
+  .skill-expert::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(0 100% 50% / 0.2), transparent);
+    transition: left 0.7s;
+  }
+
+  .skill-expert:hover::before {
+    left: 100%;
+  }
+
+  .skill-expert:hover {
+    border-color: hsl(0 100% 50% / 0.6);
+    box-shadow: 0 0 20px hsl(0 100% 50% / 0.3);
+  }
+
+  .skill-intermediate {
+    @apply transition-all duration-500 hover:scale-105 hover:border-yellow-500/50;
+  }
+
+  .skill-intermediate::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(45 100% 60% / 0.2), transparent);
+    transition: left 0.7s;
+  }
+
+  .skill-intermediate:hover::before {
+    left: 100%;
+  }
+
+  .skill-intermediate:hover {
+    border-color: hsl(45 100% 60% / 0.6);
+    box-shadow: 0 0 20px hsl(45 100% 60% / 0.3);
+  }
+
+  .skill-beginner {
+    @apply transition-all duration-500 hover:scale-105 hover:border-green-500/50;
+  }
+
+  .skill-beginner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(120 100% 50% / 0.2), transparent);
+    transition: left 0.7s;
+  }
+
+  .skill-beginner:hover::before {
+    left: 100%;
+  }
+
+  .skill-beginner:hover {
+    border-color: hsl(120 100% 50% / 0.6);
+    box-shadow: 0 0 20px hsl(120 100% 50% / 0.3);
   }
 }
 
