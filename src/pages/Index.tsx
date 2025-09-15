@@ -257,7 +257,7 @@ const Index = () => {
                 className={`skill-card skill-${skill.proficiency}`} 
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-3">
                     <skill.icon 
                       className="w-6 h-6 text-white" 
@@ -269,18 +269,6 @@ const Index = () => {
                   </span>
                 </div>
                 
-                {/* Progress Bar */}
-                <div className="relative">
-                  <div className="w-full bg-muted/30 rounded-full h-2 overflow-hidden">
-                    <div
-                      className="h-2 rounded-full transition-all duration-700"
-                      style={{
-                        width: skill.proficiency === 'expert' ? '100%' : skill.proficiency === 'intermediate' ? '66%' : '66%',
-                        background: 'linear-gradient(90deg, hsl(var(--skill-color)), hsl(var(--skill-glow)))'
-                      }}
-                    />
-                  </div>
-                </div>
               </div>
             ))}
           </div>
