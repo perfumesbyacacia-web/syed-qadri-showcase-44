@@ -271,11 +271,12 @@ const Index = () => {
                 
                 {/* Progress Bar */}
                 <div className="relative">
-                  <div className="w-full bg-muted/30 rounded-full h-2">
-                    <div 
-                      className={`progress-bar progress-${skill.proficiency}`}
+                  <div className="w-full bg-muted/30 rounded-full h-2 overflow-hidden">
+                    <div
+                      className="h-2 rounded-full transition-all duration-700"
                       style={{
-                        transitionDelay: `${index * 150}ms`
+                        width: skill.proficiency === 'expert' ? '100%' : skill.proficiency === 'intermediate' ? '66%' : '66%',
+                        background: 'linear-gradient(90deg, hsl(var(--skill-color)), hsl(var(--skill-glow)))'
                       }}
                     />
                   </div>

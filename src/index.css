@@ -203,7 +203,7 @@
 
   /* Skill card animations */
   .skill-card {
-    @apply relative overflow-hidden rounded-xl bg-card/30 backdrop-blur-sm border border-border/50 p-6 transition-all duration-300 hover:scale-105 hover:bg-card/50 hover:border-primary/50;
+    @apply relative overflow-hidden rounded-xl bg-card/30 backdrop-blur-sm border border-border/50 p-6 transition-all duration-300 hover:scale-105 hover:bg-card/50;
   }
 
   .skill-card::before {
@@ -213,12 +213,18 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.1), transparent);
-    transition: left 0.5s;
+    background: linear-gradient(90deg, transparent, hsl(var(--skill-color) / 0.2), transparent);
+    transition: left 0.7s;
   }
 
   .skill-card:hover::before {
     left: 100%;
+  }
+
+  /* Colorized hover using per-skill variables */
+  .skill-card:hover {
+    border-color: hsl(var(--skill-color) / 0.5);
+    box-shadow: 0 0 20px hsl(var(--skill-color) / 0.25);
   }
 
   /* Proficiency Badges */
@@ -244,8 +250,8 @@
   }
 
   .skill-intermediate {
-    --skill-color: 35 100% 55%; /* Yellowish-orange */
-    --skill-glow: 35 100% 65%;
+    --skill-color: 45 100% 60%; /* Yellow */
+    --skill-glow: 45 100% 70%;
   }
 
   .skill-beginner {
